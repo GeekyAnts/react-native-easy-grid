@@ -57,7 +57,30 @@ This is exactly same as
 
 > Same concept applies to `<Col />`
 
-### 4. Nested Layout or Grid
+
+### 4. Three columns (33.33% each)
+
+```
+<Grid>
+    <Col></Col>
+    <Col></Col>
+    <Col></Col>
+</Grid>
+```
+
+
+### 5. Three rows (50%, 25% and 25%)
+
+```
+<Grid>
+    <Row size={2}></Row>
+    <Row size={1}></Row>
+    <Row size={1}></Row>
+</Grid>
+```
+
+
+### 6. Nested Layout or Grid
 
 <table width="100" height="100">
 	<tr>

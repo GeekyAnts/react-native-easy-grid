@@ -59,7 +59,7 @@ This is exactly same as
 
 ### 4. Nested Layout or Grid
 
-<table border="1" width="100" height="100">
+<table width="100" height="100">
 	<tr>
 		<td rowspan="2" bgcolor="red" width="50">1</td>
 		<td bgcolor="yellow" width="50" height="50">2</td>

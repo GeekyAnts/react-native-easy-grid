@@ -1,9 +1,9 @@
 /* @flow */
 'use strict';
 
-import Row from './Components/Widgets/Row';
-import Grid from './Components/Widgets/Grid';
-import Col from './Components/Widgets/Col';
+import Row from './Components/Row';
+import Grid from './Components/Grid';
+import Col from './Components/Col';
 
 
 module.exports = {

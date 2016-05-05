@@ -123,8 +123,7 @@ This is exactly same as
 </Grid>
 ```
 
-
-
-
-
 Do you think anything could be simpler than that? This repo is part of our bigger project called [NativeBase.io](http://nativebase.io). Do check that!
+
+
+> Note: If you're using `<Row />` inside a `<ScrollView />`, the height of the <Row /> component would be flexible according to the content, though you can always apply the `height` styling.

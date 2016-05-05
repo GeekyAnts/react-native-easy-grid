@@ -138,5 +138,6 @@ This is exactly same as
 
 Do you think anything could be simpler than that? This repo is part of our bigger project called [NativeBase.io](http://nativebase.io). Do check that!
 
+# Imporntant note about usage with <ScrollView />
 
 > Note: If you're using `<Row />` inside a `<ScrollView />`, the height of the <Row /> component would be flexible according to the content, though you can always apply the `height` styling.

@@ -25,6 +25,10 @@ import { Col, Row, Grid } from "react-native-easy-grid";
 </Grid>
 ```
 
+![col-50-50](Examples/col-50-50.png "Column 50% and 50% example")
+
+
+
 > Note: If you don't assign the size property, it defaults to equal width (or height) with its siblings
 
 ### 2. Two rows

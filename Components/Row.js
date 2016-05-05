@@ -1,14 +1,13 @@
 /* @flow */
 'use strict';
 
-import React, {View } from 'react-native';
-import NativeBaseComponent from '../Base/NativeBaseComponent';
+import React, {View, Component } from 'react-native';
 import computeProps from '../../Utils/computeProps';
 import _ from 'lodash';
 import multiply from 'multiplier';
 
 
-export default class RowNB extends NativeBaseComponent {
+export default class RowNB extends Component {
     prepareRootProps() {
 
         var type = { 

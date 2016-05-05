@@ -102,4 +102,29 @@ This is exactly same as
 </Grid>
 ```
 
+
+
+### 7. Fixed width and fluid width combination
+
+```
+<Grid>
+	<Col style={ { width: 40 } }> Fixed width <Col>
+	<Col> Fluid width </Col>
+</Grid>
+```
+
+
+### 8. Fixed height and fluid height combination
+
+```
+<Grid>
+	<Row style={ { height: 40 } }> Fixed width <Row>
+	<Row> Fluid width </Row>
+</Grid>
+```
+
+
+
+
+
 Do you think anything could be simpler than that? This repo is part of our bigger project called [NativeBase.io](http://nativebase.io). Do check that!

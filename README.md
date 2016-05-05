@@ -40,6 +40,8 @@ import { Col, Row, Grid } from "react-native-easy-grid";
 </Grid>
 ```
 
+![row-50-50](Examples/row-50-50.png "Row 50% and 50% example")
+
 
 ### 3. Two rows (75% and 25%)
 
@@ -59,6 +61,8 @@ This is exactly same as
 </Grid>
 ```
 
+![row-75-25](Examples/row-75-25.png "Row 75% and 25% example")
+
 > Same concept applies to `<Col />`
 
 
@@ -71,7 +75,7 @@ This is exactly same as
     <Col></Col>
 </Grid>
 ```
-
+![col-33-33-33](Examples/col-33-33-33.png "Column 33.33% each")
 
 ### 5. Three rows (50%, 25% and 25%)
 
@@ -83,6 +87,7 @@ This is exactly same as
 </Grid>
 ```
 
+![row-50-25-25](Examples/row-50-25-25.png "Row 50%, 25% and 50% example")
 
 ### 6. Nested Layout or Grid
 
@@ -106,6 +111,8 @@ This is exactly same as
 </Grid>
 ```
 
+![complex](Examples/complex.png "Complex and Nested Layouts")
+
 
 
 ### 7. Fixed width and fluid width combination
@@ -116,6 +123,8 @@ This is exactly same as
 	<Col> Fluid width </Col>
 </Grid>
 ```
+
+![col-fluid-fixed.png](Examples/col-fluid-fixed.png "Column fluid and fixed example")
 
 
 ### 8. Fixed height and fluid height combination

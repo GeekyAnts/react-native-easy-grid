@@ -4,7 +4,6 @@
 import React, {View, Component } from 'react-native';
 import computeProps from '../Utils/computeProps';
 import _ from 'lodash';
-import multiply from 'multiplier';
 
 
 export default class RowNB extends Component {

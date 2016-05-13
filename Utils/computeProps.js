@@ -1,4 +1,4 @@
-var React = require('react-native');
+var React = require('react');
 
 var StyleSheetRegistry = require('react-native/Libraries/ReactNative/ReactNativePropRegistry');
 
@@ -7,7 +7,7 @@ module.exports = function(incomingProps, defaultProps) {
 
     // External props has a higher precedence
     var computedProps = {};
-    
+
     incomingProps = _.clone(incomingProps);
     delete incomingProps.children;
 
@@ -15,7 +15,7 @@ module.exports = function(incomingProps, defaultProps) {
 
     if(incomingProps)
         _.merge(computedProps, defaultProps, incomingProps);
-    else 
+    else
         computedProps = defaultProps;
 
     // Pass the merged Style Object instead
@@ -28,12 +28,12 @@ module.exports = function(incomingProps, defaultProps) {
             var incomingPropsStyle = incomingProps.style;
         }
 
-        _.merge(computedProps.style, defaultProps.style, incomingPropsStyle); 
+        _.merge(computedProps.style, defaultProps.style, incomingPropsStyle);
 
     }
 
     // console.log("computedProps ", computedProps);
-    
+
     return computedProps;
 
 

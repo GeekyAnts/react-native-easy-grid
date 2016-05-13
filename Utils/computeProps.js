@@ -1,6 +1,6 @@
 var React = require('react');
 
-var StyleSheetRegistry = require('react-native/Libraries/ReactNative/ReactNativePropRegistry');
+var ReactNativePropRegistry = require('react-native/Libraries/ReactNative/ReactNativePropRegistry');
 
 module.exports = function(incomingProps, defaultProps) {
 
@@ -22,7 +22,7 @@ module.exports = function(incomingProps, defaultProps) {
     if(incomingProps.style) {
 
         if(typeof incomingProps.style == 'number') {
-            var incomingPropsStyle = StyleSheetRegistry.getStyleByID(incomingProps.style);
+            var incomingPropsStyle = ReactNativePropRegistry.getByID(incomingProps.style);
             computedProps.style = {};
         } else {
             var incomingPropsStyle = incomingProps.style;

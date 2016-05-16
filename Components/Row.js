@@ -1,7 +1,8 @@
 /* @flow */
 'use strict';
 
-import React, {View, Component } from 'react-native';
+import React from 'react'
+import {View, Component} from 'react-native';
 import computeProps from '../Utils/computeProps';
 import _ from 'lodash';
 
@@ -9,15 +10,14 @@ import _ from 'lodash';
 export default class RowNB extends Component {
     prepareRootProps() {
 
-        var type = { 
+        var type = {
         	flexDirection: 'row',
-        	flex: (this.props.size) ? this.props.size : 1,    
+        	flex: (this.props.size) ? this.props.size : 1,
         }
-      
+
         var defaultProps = {
             style: type
-        }	 
-        
+        }
         return computeProps(this.props, defaultProps);
 
     }
@@ -25,7 +25,7 @@ export default class RowNB extends Component {
         return(
             <View {...this.prepareRootProps()} >{this.props.children}</View>
         );
-    }    
+    }
 
 }
 

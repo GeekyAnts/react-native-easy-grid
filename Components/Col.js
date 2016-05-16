@@ -16,8 +16,8 @@ export default class ColunmNB extends Component {
       
         var defaultProps = {
             style: type
-        }	  
-      	console.log(computeProps(this.props, defaultProps), "proppppppss");
+        }	
+        
         return computeProps(this.props, defaultProps);
 
     }

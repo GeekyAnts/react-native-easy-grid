@@ -103,7 +103,7 @@ This is exactly same as
 
 ```
 <Grid>
-	<Col>1<Col>
+	<Col>1</Col>
 	<Col>
 		<Row>2</Row>
 		<Row>3</Row>
@@ -119,7 +119,7 @@ This is exactly same as
 
 ```
 <Grid>
-	<Col style={ { width: 40 } }> Fixed width <Col>
+	<Col style={{ width: 40 }}> Fixed width </Col>
 	<Col> Fluid width </Col>
 </Grid>
 ```
@@ -131,7 +131,7 @@ This is exactly same as
 
 ```
 <Grid>
-	<Row style={ { height: 40 } }> Fixed width <Row>
+	<Row style={{ height: 40 }}> Fixed width </Row>
 	<Row> Fluid width </Row>
 </Grid>
 ```

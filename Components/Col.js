@@ -21,11 +21,19 @@ export default class ColunmNB extends Component {
         return computeProps(this.props, defaultProps);
 
     }
+
+    setNativeProps(nativeProps) {
+      this._root.setNativeProps(nativeProps);
+    }
+
     render() {
         return(
-            <View {...this.prepareRootProps()} >{this.props.children}</View>
+            <View
+              ref={component => this._root = component}
+              {...this.props}
+              {...this.prepareRootProps()}
+            >{this.props.children}</View>
         );
     }
 
 }
-

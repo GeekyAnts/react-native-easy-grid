@@ -23,7 +23,6 @@ export default class ColunmNB extends Component {
     }
     render() {
         if(this.props.onPress){
-			
             return(
                 <TouchableOpacity onPress={this.props.onPress}><View {...this.prepareRootProps()} >{this.props.children}</View></TouchableOpacity>
             );

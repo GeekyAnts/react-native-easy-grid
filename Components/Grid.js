@@ -2,7 +2,7 @@
 'use strict';
 
 import React, {Component} from 'react';
-import {View, } from 'react-native';
+import {View, TouchableOpacity, } from 'react-native';
 import computeProps from '../Utils/computeProps';
 import _ from 'lodash';
 import Col from './Col';
@@ -33,9 +33,17 @@ export default class GridNB extends Component {
         return row;
     }
     render() {
-        return(
-            <View {...this.prepareRootProps()}>{this.props.children}</View>
-        );
+        if(this.props.onPress){
+			
+            return(
+                <TouchableOpacity onPress={this.props.onPress}><View {...this.prepareRootProps()} >{this.props.children}</View></TouchableOpacity>
+            );
+        }
+        else {
+            return (
+                <View {...this.prepareRootProps()} >{this.props.children}</View>
+            );
+        }
     }
 
 }

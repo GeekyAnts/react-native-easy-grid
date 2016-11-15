@@ -7,7 +7,7 @@ import computeProps from '../Utils/computeProps';
 import _ from 'lodash';
 
 
-export default class ColunmNB extends Component {
+export default class ColumnNB extends Component {
     prepareRootProps() {
 
         var type = {

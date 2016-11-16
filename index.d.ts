@@ -1,9 +1,7 @@
 declare module "react-native-easy-grid" {
 
-    import { Component } from "react";
+    import {Component} from "react";
     import {ViewProperties} from "react-native";
-
-    export interface GridProps extends ViewProperties {}
 
     export interface RowProps extends ViewProperties {
         size?: number
@@ -13,7 +11,7 @@ declare module "react-native-easy-grid" {
         size?: number
     }
 
-    export class Grid extends Component<GridProps, any> {}
+    export class Grid extends Component<ViewProperties, any> {}
     export class Row extends Component<RowProps, any> {}
     export class Col extends Component<ColProps, any> {}
 }

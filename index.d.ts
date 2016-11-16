@@ -1,6 +1,6 @@
 declare module "react-native-easy-grid" {
 
-    import React, { Component } from "react";
+    import { Component } from "react";
     import {ViewProperties} from "react-native";
 
     export interface GridProps extends ViewProperties {}

@@ -24,6 +24,7 @@ export default class GridNB extends Component {
         return computeProps(this.props, defaultProps);
 
     }
+
     ifRow() {
         var row = false;
         React.Children.forEach(this.props.children, function (child) {
@@ -32,11 +33,19 @@ export default class GridNB extends Component {
         })
         return row;
     }
+
+    setNativeProps(nativeProps) {
+      this._root.setNativeProps(nativeProps);
+    }
+
     render() {
         return(
-            <View {...this.prepareRootProps()}>{this.props.children}</View>
+          <View
+            ref={component => this._root = component}
+            {...this.props}
+            {...this.prepareRootProps()}
+          >{this.props.children}</View>
         );
     }
 
 }
-

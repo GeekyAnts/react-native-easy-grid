@@ -21,10 +21,17 @@ export default class ColunmNB extends Component {
         return computeProps(this.props, defaultProps);
 
     }
-    render() {
+   render() {
+      if(this.props.onPress){
         return(
-            <View {...this.prepareRootProps()} >{this.props.children}</View>
+          <TouchableOpacity onPress={this.props.onPress} {...this.prepareRootProps()}><View {...this.prepareRootProps()} >{this.props.children}</View></TouchableOpacity>
         );
+      }
+      else {
+        return (
+          <View {...this.prepareRootProps()} >{this.props.children}</View>
+        );
+        }
     }
 
 }

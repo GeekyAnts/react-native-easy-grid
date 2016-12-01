@@ -7,7 +7,7 @@ import computeProps from '../Utils/computeProps';
 import _ from 'lodash';
 
 
-export default class ColunmNB extends Component {
+export default class ColumnNB extends Component {
     prepareRootProps() {
 
         var type = {
@@ -21,18 +21,19 @@ export default class ColunmNB extends Component {
         return computeProps(this.props, defaultProps);
 
     }
-   render() {
-      if(this.props.onPress){
+
+    setNativeProps(nativeProps) {
+      this._root.setNativeProps(nativeProps);
+    }
+
+    render() {
         return(
-          <TouchableOpacity onPress={this.props.onPress} {...this.prepareRootProps()}><View {...this.prepareRootProps()} >{this.props.children}</View></TouchableOpacity>
+            <View
+              ref={component => this._root = component}
+              {...this.props}
+              {...this.prepareRootProps()}
+            >{this.props.children}</View>
         );
-      }
-      else {
-        return (
-          <View {...this.prepareRootProps()} >{this.props.children}</View>
-        );
-        }
     }
 
 }
-

@@ -1,17 +1,17 @@
 var React = require('react');
-
-var ReactNativePropRegistry = require('react/lib/ReactNativePropRegistry');
-
+import ReactNativePropRegistry from 'react-native/Libraries/Renderer/src/renderers/native/ReactNativePropRegistry';
 var _ = require('lodash');
 
 module.exports = function(incomingProps, defaultProps) {
-
 
     // External props has a higher precedence
     var computedProps = {};
 
     incomingProps = _.clone(incomingProps);
     delete incomingProps.children;
+
+    var incomingPropsStyle = incomingProps.style;
+    delete incomingProps.style;
 
     // console.log(defaultProps, incomingProps);
 
@@ -21,16 +21,30 @@ module.exports = function(incomingProps, defaultProps) {
         computedProps = defaultProps;
 
     // Pass the merged Style Object instead
-    if(incomingProps.style) {
+    if(incomingPropsStyle) {
 
-        if(typeof incomingProps.style == 'number') {
-            var incomingPropsStyle = ReactNativePropRegistry.getByID(incomingProps.style);
-            computedProps.style = {};
-        } else {
-            var incomingPropsStyle = incomingProps.style;
+        var computedPropsStyle = {};
+        computedProps.style = {};
+        if (Array.isArray(incomingPropsStyle)) {
+            _.forEach(incomingPropsStyle, (style)=>{
+                if(typeof style == 'number') {
+                    _.merge(computedPropsStyle, ReactNativePropRegistry.getByID(style));
+                } else {
+                    _.merge(computedPropsStyle, style);
+                }
+            })
+
+        }
+        else {
+            if(typeof incomingPropsStyle == 'number') {
+                computedPropsStyle = ReactNativePropRegistry.getByID(incomingPropsStyle);
+            } else {
+                computedPropsStyle = incomingPropsStyle;
+            }
         }
 
-        _.merge(computedProps.style, defaultProps.style, incomingPropsStyle);
+        _.merge(computedProps.style, defaultProps.style, computedPropsStyle);
+
 
     }
 

@@ -28,7 +28,7 @@ export default class GridNB extends Component {
     ifRow() {
         var row = false;
         React.Children.forEach(this.props.children, function (child) {
-            if(child.type == Row)
+            if(child && child.type == Row)
                 row = true;
         })
         return row;

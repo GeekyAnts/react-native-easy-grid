@@ -1,4 +1,5 @@
 # React Native Easy Grid 🐵
+![Master Build Status](https://travis-ci.org/GeekyAnts/react-native-easy-grid.svg?branch=master) <br />
 
 This is NOT-JUST-ANOTHER-GRID-LAYOUT library! We are trying to simplify flexbox with easier approach.
 
@@ -125,11 +126,11 @@ This is exactly same as
 
 ```
 <Grid>
-    <Col style={{ width: 40 }}> 
-        <Text>Fixed width</Text> 
+    <Col style={{ width: 40 }}>
+        <Text>Fixed width</Text>
     </Col>
-    <Col> 
-        <Text>Fluid width</Text> 
+    <Col>
+        <Text>Fluid width</Text>
     </Col>
 </Grid>
 ```
@@ -144,8 +145,8 @@ This is exactly same as
     <Row style={{ height: 40 }}>
         <Text>Fixed width</Text>
     </Row>
-    <Row> 
-        <Text>Fluid width</Text> 
+    <Row>
+        <Text>Fluid width</Text>
     </Row>
 </Grid>
 ```

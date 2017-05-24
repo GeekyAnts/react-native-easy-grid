@@ -4,15 +4,44 @@
   "version": "0.1.12",
   "private": false,
   "dependencies": {
-    "lodash": "^4.11.1",
-    "react": "16.0.0-alpha.6",
-    "react-native": "0.44.0"
+    "lodash": "^4.11.1"
   },
   "scripts": {
     "test": "jest"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "modulePathIgnorePatterns": [
+      "acorn",
+      "core-js",
+      "isarray",
+      "wordwrap",
+      "convert-source-map",
+      "source-map",
+      "which",
+      "assert-plus",
+      "esprima",
+      "path-exists",
+      "glob",
+      "object-assign",
+      "repeating",
+      "supports-color",
+      "json-stable-stringify",
+      "minimist",
+      "duplexer2",
+      "readable-stream",
+      "extend",
+      "lru-cache",
+      "minimatch",
+      "async",
+      "punycode",
+      "clone",
+      "graceful-fs",
+      "strip-bom",
+      "through2",
+      "vinyl",
+      "camelcase"
+    ]
   },
   "devDependencies": {
     "babel-eslint": "^6.0.4",
@@ -22,7 +51,9 @@
     "babel-jest": "20.0.3",
     "babel-preset-react-native": "1.9.2",
     "jest": "20.0.3",
-    "react-test-renderer": "16.0.0-alpha.6"
+    "react-test-renderer": "16.0.0-alpha.6",
+    "react": "16.0.0-alpha.6",
+    "react-native": "0.44.0"
   },
   "repository": {
     "type": "git",

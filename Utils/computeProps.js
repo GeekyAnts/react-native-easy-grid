@@ -1,5 +1,5 @@
 var React = require('react');
-import ReactNativePropRegistry from 'react-native/Libraries/Renderer/src/renderers/native/ReactNativePropRegistry';
+import ReactNativePropRegistry from 'react-native/Libraries/Renderer/shims/ReactNativePropRegistry';
 var _ = require('lodash');
 
 module.exports = function(incomingProps, defaultProps) {
@@ -12,8 +12,6 @@ module.exports = function(incomingProps, defaultProps) {
 
     var incomingPropsStyle = incomingProps.style;
     delete incomingProps.style;
-
-    // console.log(defaultProps, incomingProps);
 
     if(incomingProps)
         _.merge(computedProps, defaultProps, incomingProps);
@@ -47,8 +45,6 @@ module.exports = function(incomingProps, defaultProps) {
 
 
     }
-
-    // console.log("computedProps ", computedProps);
 
     return computedProps;
 

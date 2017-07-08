@@ -1,4 +1,5 @@
 # React Native Easy Grid 🐵
+![Master Build Status](https://travis-ci.org/GeekyAnts/react-native-easy-grid.svg?branch=master) <br />
 
 This is NOT-JUST-ANOTHER-GRID-LAYOUT library! We are trying to simplify flexbox with easier approach.
 
@@ -92,22 +93,28 @@ This is exactly same as
 ### 6. Nested Layout or Grid
 
 <table width="100" height="100">
-	<tr>
-		<td rowspan="2" bgcolor="red" width="50">1</td>
-		<td bgcolor="yellow" width="50" height="50">2</td>
-	</tr>
-	<tr>
-		<td bgcolor="blue">3</td>
-	</tr>
+    <tr>
+        <td rowspan="2" bgcolor="red" width="50">1</td>
+        <td bgcolor="yellow" width="50" height="50">2</td>
+    </tr>
+    <tr>
+        <td bgcolor="blue">3</td>
+    </tr>
 </table>
 
 ```
 <Grid>
-	<Col>1</Col>
-	<Col>
-		<Row>2</Row>
-		<Row>3</Row>
-	</Col>
+    <Col>
+        <Text>1</Text>
+    </Col>
+    <Col>
+        <Row>
+            <Text>2</Text>
+        </Row>
+        <Row>
+            <Text>3</Text>
+        </Row>
+    </Col>
 </Grid>
 ```
 
@@ -119,8 +126,12 @@ This is exactly same as
 
 ```
 <Grid>
-	<Col style={{ width: 40 }}> Fixed width </Col>
-	<Col> Fluid width </Col>
+    <Col style={{ width: 40 }}>
+        <Text>Fixed width</Text>
+    </Col>
+    <Col>
+        <Text>Fluid width</Text>
+    </Col>
 </Grid>
 ```
 
@@ -131,8 +142,12 @@ This is exactly same as
 
 ```
 <Grid>
-	<Row style={{ height: 40 }}> Fixed width </Row>
-	<Row> Fluid width </Row>
+    <Row style={{ height: 40 }}>
+        <Text>Fixed width</Text>
+    </Row>
+    <Row>
+        <Text>Fluid width</Text>
+    </Row>
 </Grid>
 ```
 

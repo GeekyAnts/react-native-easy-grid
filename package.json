@@ -51,8 +51,8 @@
     "babel-jest": "20.0.3",
     "babel-preset-react-native": "1.9.2",
     "jest": "20.0.3",
-    "react-test-renderer": "16.0.0-alpha.6",
-    "react": "16.0.0-alpha.6",
+    "react": "16.0.0-alpha.12",
+    "react-test-renderer": "16.0.0-alpha.12",
     "react-native": "0.46.0"
   },
   "repository": {

@@ -5,7 +5,7 @@
   "private": false,
   "dependencies": {
     "lodash": "^4.11.1",
-    "react": "^15.6.1",
+    "react": "16.0.0-alpha.12",
     "react-native": "^0.46.4"
   },
   "scripts": {
@@ -46,6 +46,9 @@
     ]
   },
   "devDependencies": {
+    "babel-jest": "^20.0.3",
+    "babel-preset-react-native": "^2.1.0",
+    "jest": "^20.0.4",
     "babel-eslint": "^6.1.2",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.1.0",
@@ -58,7 +61,7 @@
     "gulp-notify": "^3.0.0",
     "gulp-plumber": "^1.1.0",
     "gulp-watch": "^4.3.11",
-    "react-test-renderer": "^15.6.1"
+    "react-test-renderer": "16.0.0-alpha.12"
   },
   "repository": {
     "type": "git",

@@ -9,7 +9,8 @@
     "react-native": "^0.46.4"
   },
   "scripts": {
-    "test": "jest"
+    "lint": "node_modules/gulp/bin/gulp.js lint",
+    "test": "npm run lint && jest"
   },
   "jest": {
     "preset": "react-native",

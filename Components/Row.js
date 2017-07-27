@@ -1,53 +1,54 @@
-'use strict';
-
 import React, {Component} from 'react';
 import {View, TouchableOpacity} from 'react-native';
-
 import computeProps from '../Utils/computeProps';
-import _ from 'lodash';
-
 
 export default class RowNB extends Component {
-    prepareRootProps() {
+  setNativeProps(nativeProps) {
+    this._root.setNativeProps(nativeProps);
+  }
 
-        var type = {
-        	flexDirection: 'row',
-        	flex: (this.props.size) ? this.props.size : (this.props.style && this.props.style.height) ? 0 : 1,
-        }
+  props: {
+    style: Object,
+    size: number,
+    children: Object,
+    onPress: Function
+  };
 
-        var defaultProps = {
-            style: type
-        }
-        return computeProps(this.props, defaultProps);
+  prepareRootProps() {
+    const flex = (this.props.style && this.props.style.height) ? 0 : 1;
+    const defaultProps = {
+      style: {
+        flexDirection: 'row',
+        flex: this.props.size ? this.props.size : flex
+      }
+    };
 
-    }
+    return computeProps(this.props, defaultProps);
+  }
 
-    setNativeProps(nativeProps) {
-      this._root.setNativeProps(nativeProps);
-    }
-
-    render() {
-      if(this.props.onPress){
-        return(
-            <TouchableOpacity onPress={this.props.onPress}>
-          <View
-        ref={component => this._root = component}
+  renderView() {
+    return (
+      <View
+        ref={(component) => {
+          this._root = component;
+        }}
         {...this.props}
         {...this.prepareRootProps()}
-      >{this.props.children}</View>
-          </TouchableOpacity>
+      >
+        {this.props.children}
+      </View>
+    );
+  }
+
+  render() {
+    if (this.props.onPress) {
+      return (
+        <TouchableOpacity onPress={this.props.onPress}>
+          {this.renderView()}
+        </TouchableOpacity>
       );
-      }
-      else{
-        return(
-          <View
-            ref={component => this._root = component}
-            {...this.props}
-            {...this.prepareRootProps()}
-          >{this.props.children}</View>
-        );
-      }
     }
 
-
+    return this.renderView();
+  }
 }

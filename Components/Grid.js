@@ -1,63 +1,58 @@
-'use strict';
-
 import React, {Component} from 'react';
 import {View, TouchableOpacity} from 'react-native';
+import {reduce} from 'lodash';
 import computeProps from '../Utils/computeProps';
-import _ from 'lodash';
-import Col from './Col';
 import Row from './Row';
 
+const ifRow = () =>
+  reduce(React.Children, (initial, child) =>
+    (child && child.type === Row) || initial
+  , false);
 
 export default class GridNB extends Component {
-    prepareRootProps() {
-
-        var type = {
-            flex: 1,
-            flexDirection: this.ifRow() ? 'column' : 'row'
-        }
-
-        var defaultProps = {
-            style: type
-        }
-
-        return computeProps(this.props, defaultProps);
-
-    }
-
-    ifRow() {
-        var row = false;
-        React.Children.forEach(this.props.children, function (child) {
-            if(child && child.type == Row)
-                row = true;
-        })
-        return row;
-    }
-
-    setNativeProps(nativeProps) {
-      this._root.setNativeProps(nativeProps);
-    }
-
-  render() {
-    if(this.props.onPress){
-      return(
-        <TouchableOpacity onPress={this.props.onPress}>
-    <View
-      ref={component => this._root = component}
-      {...this.props}
-      {...this.prepareRootProps()}
-    >{this.props.children}</View>
-      </TouchableOpacity>
-    );
-    }
-    else{
-      return(
-        <View
-      ref={component => this._root = component}
-      {...this.props}
-      {...this.prepareRootProps()}
-    >{this.props.children}</View>
-    );
-    }
+  setNativeProps(nativeProps) {
+    this._root.setNativeProps(nativeProps);
   }
 
+  props: {
+    children: Object,
+    onPress: Function
+  };
+
+  prepareRootProps() {
+    const defaultProps = {
+      style: {
+        flex: 1,
+        flexDirection: ifRow() ? 'column' : 'row'
+      }
+    };
+
+    return computeProps(this.props, defaultProps);
+  }
+
+  renderGrid() {
+    return (
+      <View
+        ref={(component) => {
+          this._root = component;
+        }}
+        {...this.props}
+        {...this.prepareRootProps()}
+      >
+        {this.props.children}
+      </View>
+    );
+  }
+
+  render() {
+    if (this.props.onPress) {
+      return (
+        <TouchableOpacity onPress={this.props.onPress}>
+          {this.renderGrid()}
+        </TouchableOpacity>
+      );
+    }
+
+    return this.renderGrid();
+  }
 }

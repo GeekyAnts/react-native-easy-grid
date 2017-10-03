@@ -3,7 +3,6 @@
 import React, {Component} from 'react';
 import {View, TouchableOpacity} from 'react-native';
 import computeProps from '../Utils/computeProps';
-import _ from 'lodash';
 
 
 export default class ColumnNB extends Component {

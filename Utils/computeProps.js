@@ -1,7 +1,7 @@
 var React = require("react");
 import ReactNativePropRegistry
   from "react-native/Libraries/Renderer/shims/ReactNativePropRegistry";
-var _ = require("lodash");
+import _ from 'lodash';
 
 module.exports = function(incomingProps, defaultProps) {
   // External props has a higher precedence

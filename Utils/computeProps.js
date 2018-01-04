@@ -1,9 +1,9 @@
-var React = require("react");
+import React from "react";
 import ReactNativePropRegistry
   from "react-native/Libraries/Renderer/shims/ReactNativePropRegistry";
 import _ from 'lodash';
 
-module.exports = function(incomingProps, defaultProps) {
+function computeProps(incomingProps, defaultProps) {
   // External props has a higher precedence
   var computedProps = {};
 
@@ -47,3 +47,5 @@ module.exports = function(incomingProps, defaultProps) {
 
   return computedProps;
 };
+
+export default computeProps;

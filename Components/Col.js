@@ -27,7 +27,8 @@ export default class ColumnNB extends Component {
   render() {
     if(this.props.onPress){
       return(
-        <TouchableOpacity onPress={this.props.onPress}>
+        <TouchableOpacity onPress={this.props.onPress}
+        {...this.prepareRootProps()}>
     <View
       ref={component => this._root = component}
       {...this.props}

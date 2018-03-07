@@ -22,7 +22,7 @@ export default class ColumnNB extends Component {
 
     }
 
-
+    setNativeProps(nativeProps) {
       this._root.setNativeProps(nativeProps);
     }
 

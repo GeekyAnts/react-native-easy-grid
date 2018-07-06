@@ -1,6 +1,5 @@
 import React from "react";
-import ReactNativePropRegistry
-  from "react-native/Libraries/Renderer/shims/ReactNativePropRegistry";
+import { StyleSheet } from "react-native";
 import _ from 'lodash';
 
 function computeProps(incomingProps, defaultProps) {
@@ -25,14 +24,14 @@ function computeProps(incomingProps, defaultProps) {
     if (Array.isArray(incomingPropsStyle)) {
       _.forEach(incomingPropsStyle, style => {
         if (typeof style == "number") {
-          _.merge(computedPropsStyle, ReactNativePropRegistry.getByID(style));
+          _.merge(computedPropsStyle, StyleSheet.flatten(style));
         } else {
           _.merge(computedPropsStyle, style);
         }
       });
     } else {
       if (typeof incomingPropsStyle == "number") {
-        computedPropsStyle = ReactNativePropRegistry.getByID(
+        computedPropsStyle = StyleSheet.flatten(
           incomingPropsStyle
         );
       } else {

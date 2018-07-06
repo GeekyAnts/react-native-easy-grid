@@ -9,6 +9,7 @@
 - Upgraded react-native to 0.56.0
 - Upgraded react-test-renderer to 16.4.1
 
+
 ### Bug Fixes
 
 - Compatible with React Native 0.56, fixed `ReactNativePropRegistry` issue.

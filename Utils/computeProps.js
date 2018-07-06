@@ -1,6 +1,6 @@
 import React from "react";
 import ReactNativePropRegistry
-  from "react-native/Libraries/Renderer/shims/ReactNativePropRegistry";
+  from "react-native";
 import _ from 'lodash';
 
 function computeProps(incomingProps, defaultProps) {

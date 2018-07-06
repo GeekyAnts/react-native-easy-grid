@@ -1,5 +1,15 @@
-# [0.1.17](https://github.com/GeekyAnts/react-native-easy-grid/releases/tag/v0.1.17)
+# [0.2.0](https://github.com/GeekyAnts/react-native-easy-grid/releases/tag/v0.2.0)
+
+### Updated Features
+
+- Upgraded babel-jest to 23.2.0
+- Upgraded babel-preset-react-native to 5
+- Upgraded jest to 23.3.0
+- Upgraded react to 16.4.1
+- Upgraded react-native to 0.56.0
+- Upgraded react-test-renderer to 16.4.1
+
 
 ### Bug Fixes
 
-- Prevented Row/Col from disappearing on add of onPress. PR ([#56](https://github.com/GeekyAnts/react-native-easy-grid/pull/56)), closes ([#46](https://github.com/GeekyAnts/react-native-easy-grid/issues/46))
+- Compatible with React Native 0.56, fixed `ReactNativePropRegistry` issue.

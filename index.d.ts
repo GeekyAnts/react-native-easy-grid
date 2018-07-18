@@ -5,10 +5,12 @@ declare module "react-native-easy-grid" {
 
     export interface RowProps extends ViewProperties {
         size?: number
+        onPress?: () => void
     }
 
     export interface ColProps extends ViewProperties {
         size?: number
+        onPress?: () => void
     }
 
     export class Grid extends Component<ViewProperties, any> {}

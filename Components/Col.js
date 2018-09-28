@@ -1,16 +1,18 @@
 'use strict';
 
 import React, {Component} from 'react';
-import {View, TouchableOpacity} from 'react-native';
+import {View, TouchableOpacity, StyleSheet} from 'react-native';
 import computeProps from '../Utils/computeProps';
 
 
 export default class ColumnNB extends Component {
     prepareRootProps() {
 
+        var flattenedStyle = StyleSheet.flatten(this.props.style)
+
         var type = {
         	flexDirection: 'column',
-        	flex: (this.props.size) ? this.props.size : (this.props.style && this.props.style.width) ? 0 : 1,
+        	flex: (this.props.size) ? this.props.size : (flattenedStyle && flattenedStyle.width) ? 0 : 1,
         }
 
         var defaultProps = {

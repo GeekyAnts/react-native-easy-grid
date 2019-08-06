@@ -4,7 +4,7 @@
   "version": "0.2.1",
   "private": false,
   "dependencies": {
-    "lodash": "4.17.11"
+    "lodash": "^4.17.15"
   },
   "scripts": {
     "test": "jest"
@@ -52,7 +52,7 @@
     "eslint-plugin-react-native": "^1.0.0",
     "jest": "23.3.0",
     "react": "16.4.1",
-    "react-native": "0.56.0",
+    "react-native": "^0.60.4",
     "react-test-renderer": "16.4.1"
   },
   "repository": {

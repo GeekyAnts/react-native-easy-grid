@@ -1,7 +1,7 @@
 {
   "name": "react-native-easy-grid",
   "description": "Easy React Native Layout & Grid for the Dumb",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "private": false,
   "dependencies": {
     "lodash": "^4.17.15"

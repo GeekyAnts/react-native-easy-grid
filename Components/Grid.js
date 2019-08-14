@@ -8,11 +8,11 @@ import Row from './Row';
 
 
 export default class GridNB extends Component {
-    prepareRootProps() {
+    prepareRootProps(ifRow = this.ifRow()) {
 
         var type = {
             flex: 1,
-            flexDirection: this.ifRow() ? 'column' : 'row'
+            flexDirection: ifRow ? 'column' : 'row'
         }
 
         var defaultProps = {
@@ -43,7 +43,7 @@ export default class GridNB extends Component {
     <View
       ref={component => this._root = component}
       {...this.props}
-      {...this.prepareRootProps()}
+      {...this.prepareRootProps(this.props.ifRow)}
     >{this.props.children}</View>
       </TouchableOpacity>
     );
@@ -53,7 +53,7 @@ export default class GridNB extends Component {
         <View
       ref={component => this._root = component}
       {...this.props}
-      {...this.prepareRootProps()}
+      {...this.prepareRootProps(this.props.ifRow)}
     >{this.props.children}</View>
     );
     }

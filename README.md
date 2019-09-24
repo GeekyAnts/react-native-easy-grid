@@ -142,7 +142,7 @@ This is exactly same as
 
 ```
 <Grid>
-    <Row style={{ height: 40 }}>
+    <Row style={{ width: 40 }}>
         <Text>Fixed width</Text>
     </Row>
     <Row>

@@ -3,6 +3,20 @@
 
 This is NOT-JUST-ANOTHER-GRID-LAYOUT library! We are trying to simplify flexbox with easier approach.
 
+
+## About
+
+   React Native Easy Grid is part of the NativeBase ecosystem,
+   built by [GeekyAnts](https://geekyants.com?utm_source=github&utm_medium=opensource&utm_campaign=react-native-easy-grid).
+
+   We specialize in:
+   - [React Native Development](https://geekyants.com/hire-react-native-developers?utm_source=github&utm_medium=opensource&utm_campaign=react-native-easy-grid) -
+     Expert mobile app development
+   - [UI/UX Design Services](https://geekyants.com/service/ui-ux-design-services?utm_source=github&utm_medium=opensource&utm_campaign=react-native-easy-grid) -
+     Creating intuitive user interfaces
+
+   Need a custom layout solution? [Let's talk](https://geekyants.com/hire?utm_source=github&utm_medium=opensource&utm_campaign=react-native-easy-grid)
+
 ## Installation
 
 ```

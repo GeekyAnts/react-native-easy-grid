@@ -28,10 +28,9 @@ export default class RowNB extends Component {
     }
 
     render() {
-      if(this.props.onPress){
+      if(this.props.onPress || this.props.onLongPress){
         return(
-            <TouchableOpacity onPress={this.props.onPress}
-            {...this.prepareRootProps()}>
+            <TouchableOpacity onPress={this.props.onPress} onLongPress={this.props.onLongPress}>
           <View
         ref={component => this._root = component}
         {...this.props}
